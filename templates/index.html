@@ -2,17 +2,41 @@
 <html>
 <head>
   <title>Streaming Video Recorder</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <title>Employee Registration Portal</title>
+ <!-- <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">-->
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="https://gist.github.com/hellt/bc4fc51d6f1b9584605517f5c8d6a5a0" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <div class="container">
   <h1>Streaming Video Recorder</h1>
   <div id="recorder">
     <!-- <button id="record">Record</button> -->
     <!-- <button id="stop">Stop</button> -->
-    <input type="text" id="username" name="username" autofocus>
-    <button id="snap">Snap</button>
+    <div class="input-group">
+      <span class="input-group-addon">Username:</span>
+      <input id="username" type="text" class="form-control" name="username" autofocus >
+    </div></br>
+    <!-- <input type="text" id="username" name="username" autofocus> -->
+    <button id="snap" class="btn btn-danger">Snap</button>
     <a id="download"></a>
     <script type="text/javascript" src="{{ url_for('static', filename='recorder.js') }}"></script>      
   </div>
-  <img id="video" src="{{ url_for('video_viewer') }}">
+</br></br>
+  <img style="width: 50%;
+  height: 250px;"
+   id="video" src="{{ url_for('video_viewer') }}">
+</div>
 </body>
 </html>
+
